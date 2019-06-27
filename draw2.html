@@ -1,0 +1,37 @@
+<html>
+<head> 
+    <link href="style.css" type="text/css" rel=stylesheet><link>
+ </head>
+<body onmousemove="dosomething()">
+  
+</body>
+<script>
+
+class draw{
+    constructor(T,L,color){
+        var ref=document.createElement("Span");
+        ref.innerHTML="0";
+        ref.style.position="absolute";
+        ref.style.color=color;
+        ref.style.top=T;
+        ref.style.left=L;
+        document.body.appendChild(ref);
+    }
+}
+
+    function dosomething(){
+var X=event.clientX;
+var Y=event.clientY;
+if (event.ctrlKey){
+    var obj = new draw(Y,X,"Orange");
+}
+else if (event.altKey){
+    var obj = new draw(Y,X,"Green");
+}
+else { 
+    var obj=new draw(Y,X,"Blue")
+}
+    }
+
+</script>
+</html>

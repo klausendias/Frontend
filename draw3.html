@@ -1,0 +1,49 @@
+<html>
+<head> 
+    <link href="style.css" type="text/css" rel=stylesheet><link>
+ </head>
+<body onpageload="dosomething()">
+  
+</body>
+<script>
+class box{
+    constructor(Top,Left,Color){
+        var ref=document.createElement("div");
+        ref.style.position="absolute";
+        ref.style.top=Top;
+        ref.style.left=Left;
+        ref.style.width='100%';
+        ref.style.height='100%';
+        ref.style.backgroundColor=Color;
+        document.body.appendChild(ref);
+    }
+}
+class fire{
+    constructor(T,L,color){
+        var ref=document.createElement("Span");
+        ref.innerHTML="0";
+        ref.style.position="absolute";
+        ref.style.color=color;
+        ref.style.top=T;
+        ref.style.left=L;
+        document.body.appendChild(ref);
+        var Timer=window.setInterval(
+            function(){
+                ref.style.top=parseInt(ref.style.top)-10;
+                if(parseInt(ref.style.top)<=10){
+                window.clearInterval(Timer);
+            }
+        },50);
+   
+    }
+}
+
+    function dosomething(){
+    var b=new box(100,100,'black')
+    var X=event.clientX;
+    var Y=event.clientY;
+    var ref = new fire(Y,X);
+    }
+
+</script>
+</html>

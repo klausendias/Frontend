@@ -1,0 +1,47 @@
+<html>
+<head> 
+    <link href="style.css" type="text/css" rel=stylesheet><link>
+ </head>
+<body onload="PageLoad()" onmousemove="draw()">   
+    <span id="D" style="position:absolute; top:0; left:0">*</span>
+</body>
+
+<script>
+    var fsize=10;
+    class box{   
+    static Color='black';   
+    createBox(Top,Left,Color){       
+        var B=document.createElement("div");
+        B.style.position="absolute";
+        B.style.top=Top;       
+        B.style.left=Left;       
+        B.style.width='100px';       
+        B.style.height='100px';       
+        B.style.backgroundColor=Color;       
+        B.addEventListener("mouseenter", function(){           
+        box.Color=Color;      
+         });   
+        document.body.appendChild(B);
+    }
+    }   
+        function draw(){       
+        document.getElementById("D").style.top=event.clientY;       
+        document.getElementById("D").style.left=event.clientX;       
+        document.getElementById("D").style.Color=box.Color;       
+        if(event.ctrlKey){        
+            fsize++; }
+        else if(event.altKey){ 
+            fsize--;
+        }   
+            document.getElementById("D").fontSize=fsize;   
+        }
+            
+        function PageLoad(){       
+        var B=new box();       
+        B.createBox(10,1,'Green');       
+        B.createBox(10,700,"Blue");       
+        B.createBox(400,10,"Red");   
+        }
+
+    </script>
+    </html>

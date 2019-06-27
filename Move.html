@@ -1,0 +1,17 @@
+<html>
+<head> 
+    <link href="style.css" type="text/css" rel=stylesheet><link>
+ </head>
+<body onmousemove="doit()">
+    <span id="x" style="position:absolute; top:0px; left:0px"> Nationwide</span>
+  
+</body>
+<script>
+function doit(){
+    var ref=document.getElementById("x");
+    ref.style.top=window.event.clientY;
+    ref.style.left=window.event.clientX;
+}
+
+</script>
+</html>
