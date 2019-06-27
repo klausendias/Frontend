@@ -1,0 +1,41 @@
+.myclass {
+background-image: url(BG.jpg);
+}
+
+button {
+    color: orangered;
+    margin: 15px 5px 0px 7px;
+}
+
+{ 
+    transform: rotate(2deg);
+}
+
+h4 {
+    color: white;
+}
+
+title {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+.marquee {
+    width: 450px;
+    margin: 0 auto;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  input[type="number"]{
+      border-radius: 1rem;
+      color: white;
+  }
+
+  #button:hover{
+      background-color:black;
+  }

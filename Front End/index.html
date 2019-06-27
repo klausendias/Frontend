@@ -1,0 +1,32 @@
+<html>
+<head> 
+    <link href="style.css" type="text/css" rel=stylesheet><link>
+</head>
+ <title>Hello Everyone</title>
+<body class="myclass">
+    <h1 class="marquee">Calculator</h1>
+
+    <script>window.alert('Welcome to my page')</script>
+
+<h4>What's up?</h4>
+<div>
+<label for="firstnum">First Number:</label> 
+      <input type="number" name="firstnum" id="firstnum"/>
+</div>
+<label for="secondnum">Second Number:</label>
+        <input type="number" name="secondnum" id="secondnum"/>        
+<div>
+    <br>
+<button onclick="calculation().add()">Add</button>
+<button onclick="calculation().subtract()">Subtract</button>
+<button onclick="calculation().divide()">Divide</button>
+<button onclick="calculation().multiply()">Multiply</button>
+ </div>
+ <br>
+ <label for="result">Result:</label>
+  <output id="result"></output>
+
+<script src="script.js"></script>
+
+</body>
+</html>
